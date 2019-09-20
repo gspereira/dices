@@ -25,7 +25,7 @@ const Dices = ({actions, places}) => {
                 </div>
 
                 <div className="rollButton">
-                    <button onClick={() => rollDices}> Roll </button>
+                    <button onClick={rollDices}> Roll </button>
                 </div>
             </div>
         </div>

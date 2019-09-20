@@ -18,7 +18,7 @@ const PlacesList = (props) => {
             </table>
             <form onSubmit={props.addPlace}>
                 <div>
-                    <input values={props.newPlace} onChange={props.handlePlaceChange}/>
+                    <input value={props.newPlace} onChange={props.handlePlaceChange}/>
                 </div>
                 <div>
                     <button type='submit'>Add</button>

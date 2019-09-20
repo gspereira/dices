@@ -19,7 +19,7 @@ const ActionList = props => {
             <form onSubmit={props.addAction}>
                 <div>
                     <input
-                        values={props.newAction}
+                        value={props.newAction}
                         onChange={props.handleActionChange}
                     />
                 </div>

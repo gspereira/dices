@@ -1,8 +1,10 @@
-.main {
+.main, .rollButton {
     max-width: 700px;
     margin: 20px auto 0;
     padding: 0 20px;
     vertical-align: top;
+    display: flex;
+    justify-content: center;
 }
 .main .dice strong{ 
     background-color: transparent;
@@ -20,7 +22,7 @@
     display: inline-block;
 }
 
-.main .rollButton button{
+.rollButton button{
     padding: 10px;
     border-radius: 5px;
     border: 0;

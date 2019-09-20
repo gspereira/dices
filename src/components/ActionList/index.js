@@ -24,7 +24,7 @@ const ActionList = props => {
                     />
                 </div>
                 <div>
-                    <button type="submit">Add</button>
+                    <button type="submit" className='addButton'>Add</button>
                 </div>
             </form>
         </div>

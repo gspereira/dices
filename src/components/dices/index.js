@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import './styles.css';
+import React, { useState } from "react";
+import "./styles.css";
 
-const Dices = ({actions, places}) => {
-    const [ action, setAction ] = useState("");
-    const [ place, setPlace ] = useState("");
+const Dices = ({ actions, places }) => {
+    const [action, setAction] = useState("");
+    const [place, setPlace] = useState("");
 
     const rollDices = () => {
         setPlace(random(places));
         setAction(random(actions));
-    }
+    };
 
-    const random = (array) => {
-        return array[Math.floor(Math.random() * array.length)]
-    }
+    const random = array => {
+        return array[Math.floor(Math.random() * array.length)];
+    };
 
     return (
         <div>
@@ -23,10 +23,9 @@ const Dices = ({actions, places}) => {
                 <div className="dice">
                     <strong>{place}</strong>
                 </div>
-
-                <div className="rollButton">
-                    <button onClick={rollDices}> Roll </button>
-                </div>
+            </div>
+            <div className="rollButton">
+                <button onClick={rollDices}> Roll </button>
             </div>
         </div>
     );

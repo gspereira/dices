@@ -42,22 +42,24 @@ function App() {
     
     return (
         <div className='Wrapper'>
-            <ActionList 
-                handleActionChange={handleActionChange}
-                newAction={newAction}
-                addAction={addAction}
-                actions={actions}
-            />
-            <PlacesList 
-                handlePlaceChange={handlePlaceChange}
-                newPlace={newPlace}
-                addPlace={addPlace}
-                places={places}
-            />
             <Dices 
                 actions={actions}
                 places={places}
             />
+            <div className='form-lists'>
+                <ActionList 
+                    handleActionChange={handleActionChange}
+                    newAction={newAction}
+                    addAction={addAction}
+                    actions={actions}
+                />
+                <PlacesList 
+                    handlePlaceChange={handlePlaceChange}
+                    newPlace={newPlace}
+                    addPlace={addPlace}
+                    places={places}
+                />
+            </div>
         </div>
     );
 }

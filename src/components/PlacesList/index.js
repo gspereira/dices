@@ -21,7 +21,7 @@ const PlacesList = (props) => {
                     <input value={props.newPlace} onChange={props.handlePlaceChange}/>
                 </div>
                 <div>
-                    <button type='submit'>Add</button>
+                    <button type='submit' className='addButton'>Add</button>
                 </div>
             </form>
         </div>

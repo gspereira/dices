@@ -1,63 +1,35 @@
-import React, { Component } from 'react';
-
+import React, { useState } from 'react';
 import './styles.css';
 
-export default class Dices extends Component{
-    state = {
-        part: null,
-        action: null,
-    };
+const Dices = ({actions, places}) => {
+    const [ action, setAction ] = useState("");
+    const [ place, setPlace ] = useState("");
 
-    componentDidMount(){
-        this.rollDices();
+    const rollDices = () => {
+        setPlace(random(places));
+        setAction(random(actions));
     }
 
-    random(array) {
+    const random = (array) => {
         return array[Math.floor(Math.random() * array.length)]
     }
 
-    rollDices = async => {
-        const parts = [
-            'Room',
-            'Bathroom',
-            'Living Room',
-            'Garden',
-            'Roof',
-            'Kitchen',
-            'Abu Dhabi',
-        ];
-        const actions = [
-            'Jump',
-            'Run',
-            'Shout',
-            'Roll',
-            'Scream',
-            'Drink',
-            'Kill',
-            'Dance'
-        ];
-
-        this.setState({
-            part: this.random(parts),
-            action: this.random(actions),
-        });
-    };
-
-    render(){
-        const {part, action} = this.state;
-        return (
+    return (
+        <div>
             <div className="main">
-                <div className="partsDice">
+                <div className="dice">
                     <strong>{action}</strong>
                 </div>
-                <div className="actionsDice">
-                    <strong>{part}</strong>
+                <div className="dice">
+                    <strong>{place}</strong>
                 </div>
 
                 <div className="rollButton">
-                    <button onClick={this.rollDices}> Roll </button>
+                    <button onClick={() => rollDices}> Roll </button>
                 </div>
             </div>
-        );
-    };
-}
+        </div>
+    );
+};
+
+export default Dices;

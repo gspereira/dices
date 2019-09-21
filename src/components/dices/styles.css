@@ -8,8 +8,7 @@
 }
 .main .dice strong{ 
     background-color: transparent;
-    color: #333333;
-    float: left;
+    color: #595959;
 }
 
 .dice{
@@ -19,7 +18,9 @@
     height: 100px;
     outline: 10px groove tomato;
     margin: 20px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rollButton button{

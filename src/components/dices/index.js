@@ -18,10 +18,10 @@ const Dices = ({ actions, places }) => {
         <div>
             <div className="main">
                 <div className="dice">
-                    <strong>{action}</strong>
+                    <strong className='dice-content'>{action}</strong>
                 </div>
                 <div className="dice">
-                    <strong>{place}</strong>
+                    <strong className='dice-content'>{place}</strong>
                 </div>
             </div>
             <div className="rollButton">
